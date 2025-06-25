@@ -1,20 +1,19 @@
-
 import { Form, Input, Button, Card } from 'antd';
 import { useState } from 'react';
 
-export default function LoginForm({ onLogin }) {
+export default function RegisterForm({ onRegister }) {
   const [loading, setLoading] = useState(false);
 
   const handleFinish = ({ login, password }) => {
     setLoading(true);
     setTimeout(() => {
-      onLogin(login, password);
+      onRegister(login, password);
       setLoading(false);
     }, 500);
   };
 
   return (
-    <Card title="Вход">
+    <Card title="Регистрация">
       <Form layout="vertical" onFinish={handleFinish}>
         <Form.Item label="Логин" name="login" rules={[{ required: true }]}>
           <Input />
@@ -24,7 +23,7 @@ export default function LoginForm({ onLogin }) {
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit" loading={loading} block>
-            Войти
+            Зарегистрироваться
           </Button>
         </Form.Item>
       </Form>

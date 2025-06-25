@@ -1,8 +1,8 @@
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import { Layout, Menu, Button, message } from 'antd';
 import { useState } from 'react';
-import LoginForm from './LoginRegistrationForm/LoginForm';
-import RegisterForm from './LoginRegistrationForm/RegistrationForm';
+import LoginForm from './Login/LoginForm';
+import RegisterForm from './Login/RegisterForm';
 
 const { Header, Content, Footer } = Layout;
 const users = {};
